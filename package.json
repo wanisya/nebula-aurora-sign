@@ -1,0 +1,13 @@
+{
+  "name": "nebula-aurora-sign",
+  "version": "1.0.0",
+  "description": "Lukis galaksi, rasi bintang, dan nebula heart dengan gerakan tangan lewat kamera (MediaPipe Hands).",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}

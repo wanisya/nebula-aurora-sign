@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Nebula Aurora Sign · by Wani Syafitri</title>
+  <meta name="author" content="Wani Syafitri">
+  <meta name="description" content="Lukis galaksi, rasi bintang, dan nebula heart dengan gerakan tangan di depan kamera. Langsung di browser.">
+  <meta name="theme-color" content="#070a1f">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nebula Aurora Sign">
+  <meta property="og:title" content="Nebula Aurora Sign · by Wani Syafitri">
+  <meta property="og:description" content="Lukis galaksi, rasi bintang, dan nebula heart dengan gerakan tanganmu di depan kamera. Langsung di browser.">
+  <meta property="og:url" content="https://wanisya.github.io/nebula-aurora-sign/">
+  <meta property="og:image" content="https://wanisya.github.io/nebula-aurora-sign/assets/preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://wanisya.github.io/nebula-aurora-sign/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Latar langit: bintang + aurora -->
+  <div class="sky" aria-hidden="true">
+    <canvas id="sky-canvas"></canvas>
+    <div class="aurora a1"></div>
+    <div class="aurora a2"></div>
+    <div class="aurora a3"></div>
+    <div class="ribbon"></div>
+  </div>
+
+  <!-- ================= LANDING ================= -->
+  <main id="landing">
+    <header class="nav">
+      <a class="brand" href="#top"><span class="brand-mark">✦</span>Nebula Aurora Sign</a>
+      <nav class="nav-links">
+        <a href="#modes">Mode</a>
+        <a href="#gestures">Gestur</a>
+        <a href="#tips">Tips</a>
+        <a href="kenalan.html">Pengembang</a>
+      </nav>
+      <button class="btn btn-glass btn-sm" data-action="start">Buka Studio</button>
+    </header>
+
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="pulse"></span>Galaxy Hand Studio · real-time</span>
+        <h1>Lukis galaksi dengan <span class="grad">gerakan tanganmu</span></h1>
+        <p class="lead">Kamera membaca 21 titik di setiap tanganmu secara real-time. Tunjuk, cubit, kepal, atau bentuk hati, lalu debu bintang, nebula, black hole, dan rasi bintang muncul di udara.</p>
+        <div class="cta">
+          <button class="btn btn-primary btn-lg" data-action="start">✦ Mulai Kamera</button>
+          <a class="btn btn-ghost btn-lg" href="#gestures">Lihat gestur</a>
+        </div>
+        <ul class="trust">
+          <li>🔒 Video tidak pernah keluar dari perangkatmu</li>
+          <li>⚡ Tanpa login, tanpa database</li>
+          <li>🎥 Simpan foto & video</li>
+        </ul>
+        <a class="dev-link" href="kenalan.html"><img src="assets/wani-avatar.jpg" alt="" width="320" height="320">Dibuat oleh <b>Wani Syafitri</b> · kenalan yuk <span>→</span></a>
+      </div>
+      <div class="hero-visual">
+        <div class="demo-card">
+          <canvas id="demo-canvas"></canvas>
+          <div class="demo-chip c1">☝️ debu bintang</div>
+          <div class="demo-chip c2">🌌 galaksi spiral</div>
+          <div class="demo-chip c3">💖 nebula heart</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="modes">
+      <div class="section-head">
+        <span class="eyebrow">3 mode kosmik</span>
+        <h2>Satu kamera, satu alam semesta</h2>
+      </div>
+      <div class="mode-cards">
+        <article class="mode-card m-galaxy">
+          <div class="mode-icon">🌌</div>
+          <h3>Galaksi</h3>
+          <p>Lukis debu bintang dengan telunjuk, cubit untuk melahirkan galaksi spiral, lalu kepalkan tangan untuk membuat black hole yang menyedot semuanya sebelum meledak jadi Big Bang.</p>
+          <div class="tags"><span>☝️ lukis</span><span>🤏 galaksi</span><span>✊ black hole</span></div>
+        </article>
+        <article class="mode-card m-const">
+          <div class="mode-icon">✨</div>
+          <h3>Rasi Bintang</h3>
+          <p>Tahan telunjuk untuk menaruh bintang satu per satu. Kepalkan tangan supaya bintang menyala dan tersambung, lalu buka tangan untuk <em>make a wish</em> bersama hujan bintang jatuh.</p>
+          <div class="tags"><span>☝️ taruh</span><span>✊ nyalakan</span><span>🖐️ wish</span></div>
+        </article>
+        <article class="mode-card m-heart">
+          <div class="mode-icon">💖</div>
+          <h3>Nebula Heart</h3>
+          <p>Bentuk hati dengan dua tangan untuk memanggil Nebula Heart raksasa yang berdetak dan mengikuti tanganmu. Cubit untuk hati kecil, kepal untuk memecahkannya jadi kelopak cahaya.</p>
+          <div class="tags"><span>🫶 hati</span><span>🤏 hati kecil</span><span>✊ pecahkan</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="gestures">
+      <div class="section-head">
+        <span class="eyebrow">Bahasa tangan</span>
+        <h2>6 gestur yang dikenali</h2>
+      </div>
+      <div class="gesture-grid">
+        <div class="gesture"><span>☝️</span><b>Tunjuk</b><small>Hanya telunjuk yang terbuka</small></div>
+        <div class="gesture"><span>🤏</span><b>Cubit</b><small>Ujung jempol bertemu ujung telunjuk</small></div>
+        <div class="gesture"><span>✊</span><b>Kepal</b><small>Semua jari ditekuk</small></div>
+        <div class="gesture"><span>🖐️</span><b>Buka</b><small>Keempat jari terbuka lebar</small></div>
+        <div class="gesture"><span>✌️</span><b>Peace</b><small>Ganti palet warna kapan saja</small></div>
+        <div class="gesture"><span>🫶</span><b>Hati 2 tangan</b><small>Telunjuk menyatu di atas, jempol di bawah</small></div>
+      </div>
+    </section>
+
+    <section class="section" id="tips">
+      <div class="tips-card">
+        <div>
+          <span class="eyebrow">Biar deteksinya mulus</span>
+          <h2>Tips sebelum mulai</h2>
+        </div>
+        <ul>
+          <li><b>Cahaya cukup.</b> Wajah & tangan jangan membelakangi lampu atau jendela.</li>
+          <li><b>Jarak 50–150 cm.</b> Pastikan seluruh telapak tangan terlihat kamera.</li>
+          <li><b>Gerak pelan dulu.</b> Gestur dikenali setelah ±3 frame stabil.</li>
+          <li><b>Tanpa tangan?</b> Mouse juga bisa: drag untuk melukis, klik untuk aksi cubit.</li>
+          <li><b>Shortcut:</b> <kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> mode · <kbd>P</kbd> foto · <kbd>R</kbd> rekam · <kbd>C</kbd> hapus · <kbd>V</kbd> tampilan · <kbd>K</kbd> palet</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="pengembang">
+      <div class="dev-card">
+        <img src="assets/wani-avatar.jpg" alt="Wani Syafitri" width="320" height="320">
+        <div>
+          <p class="serif-kicker">Di balik semesta kecil ini</p>
+          <h2>Ada seseorang yang merangkainya</h2>
+          <p class="dev-sub">Nebula Aurora Sign dirancang dan dibangun oleh Wani Syafitri, IT &amp; Software Engineer dan peneliti kecerdasan buatan.</p>
+        </div>
+        <a class="btn btn-primary" href="kenalan.html">✧ Kenalan dengan Pengembangnya</a>
+      </div>
+    </section>
+
+    <section class="section final-cta">
+      <h2>Siap menggambar alam semesta?</h2>
+      <button class="btn btn-primary btn-lg" data-action="start">✦ Mulai Kamera</button>
+    </section>
+
+    <footer class="foot">
+      <span>✦ Nebula Aurora Sign · dibuat dengan 💖 oleh <a href="kenalan.html"><b>Wani Syafitri</b></a></span>
+      <span>MediaPipe Hands + Canvas · semua diproses di browser</span>
+    </footer>
+  </main>
+
+  <!-- ================= STUDIO ================= -->
+  <section id="studio" hidden>
+    <canvas id="stage"></canvas>
+    <video id="cam" playsinline muted></video>
+    <div class="flash" id="flash"></div>
+
+    <header class="studio-top">
+      <button class="brand brand-btn" data-action="exit" title="Kembali ke beranda">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="brand-mark">✦</span><span class="brand-text">Nebula Aurora Sign</span>
+      </button>
+
+      <div class="modes" role="tablist" aria-label="Mode">
+        <button role="tab" data-mode="galaxy" class="active" title="Mode Galaksi (1)"><span>🌌</span><b>Galaksi</b></button>
+        <button role="tab" data-mode="constellation" title="Mode Rasi Bintang (2)"><span>✨</span><b>Rasi Bintang</b></button>
+        <button role="tab" data-mode="heart" title="Mode Nebula Heart (3)"><span>💖</span><b>Nebula Heart</b></button>
+      </div>
+
+      <div class="tools">
+        <button class="tool" data-action="view" title="Ganti tampilan kamera (V)">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          <span id="view-label">Redup</span>
+        </button>
+        <button class="tool" data-action="palette" title="Ganti palet warna (K)">
+          <i class="swatch" id="swatch"></i><span id="palette-label">Aurora Pink</span>
+        </button>
+        <button class="tool icon-only" data-action="skeleton" aria-pressed="true" title="Tampilkan kerangka tangan (H)">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M8 13V5.5a1.5 1.5 0 013 0V12m0-1V4.5a1.5 1.5 0 013 0V12m0-1V6.5a1.5 1.5 0 013 0V15a6 6 0 01-6 6h-1a6 6 0 01-5-2.7L3.6 15a1.5 1.5 0 012.5-1.7L8 15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="tool icon-only" data-action="guide" title="Panduan gestur (G)">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9.5 9.5a2.5 2.5 0 114 2c-.9.6-1.5 1.1-1.5 2.2M12 17h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <button class="tool icon-only" data-action="fullscreen" title="Layar penuh (F)">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <aside class="guide glass" id="guide">
+      <button class="guide-head" data-action="guide">
+        <h3 id="guide-title">Mode Galaksi</h3>
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <ul id="guide-list"></ul>
+      <p class="guide-note">Tanpa tangan? Drag mouse untuk melukis, klik untuk aksi cubit.</p>
+    </aside>
+
+    <div class="toasts" id="toasts" aria-live="polite"></div>
+
+    <div class="status glass" id="status"><i class="status-dot"></i><span id="status-text">Mencari tangan…</span></div>
+
+    <footer class="studio-bottom">
+      <p class="hint" id="hint"></p>
+      <div class="controls glass">
+        <button class="ctrl" data-action="clear" title="Bersihkan kanvas (C)">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 12a2 2 0 002 2h6a2 2 0 002-2l1-12M9 7V4h6v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Hapus</span>
+        </button>
+        <button class="shutter" data-action="photo" title="Ambil foto (P)" aria-label="Ambil foto"><span></span></button>
+        <button class="ctrl rec" data-action="record" title="Rekam video (R)">
+          <i class="rec-dot"></i><span id="rec-label">Rekam</span>
+        </button>
+        <button class="ctrl" data-action="gallery" title="Galeri sesi">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="9" cy="10" r="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M21 16l-5-5-8 9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <span>Galeri <em id="gallery-count">0</em></span>
+        </button>
+      </div>
+    </footer>
+
+    <aside class="drawer glass" id="drawer" aria-label="Galeri sesi">
+      <header>
+        <h3>Galeri Sesi</h3>
+        <button class="tool icon-only" data-action="gallery" title="Tutup">✕</button>
+      </header>
+      <p class="muted">Hasil disimpan sementara selama tab ini terbuka (tanpa database). Klik <b>Unduh</b> untuk menyimpan ke perangkatmu.</p>
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </aside>
+  </section>
+
+  <!-- ================= SAMBUTAN ================= -->
+  <div class="welcome" id="welcome" role="dialog" aria-modal="true" aria-labelledby="welcome-title">
+    <div class="welcome-card glass">
+      <i class="sparkle s1">✦</i><i class="sparkle s2">✧</i><i class="sparkle s3">✦</i><i class="sparkle s4">⋆</i>
+      <button class="welcome-skip" data-welcome="close">Lewati</button>
+
+      <div class="welcome-step active" data-step="0">
+        <div class="astro">🌙</div>
+        <p class="welcome-kicker">Selamat datang di</p>
+        <h2 id="welcome-title"><span class="grad">Nebula Aurora Sign</span></h2>
+        <p class="byline">sebuah semesta kecil karya <b>Wani Syafitri</b></p>
+        <p class="welcome-text">Di antara sunyi malam dan pendar aurora, ada sebuah taman kecil tempat bintang-bintang menunggu untuk disentuh.</p>
+        <p class="welcome-text">Aku Wani. Dengan sepenuh hati, kuundang kamu singgah sejenak di sini, tempat tanganmu menjadi pena dan langit adalah halaman yang belum sempat ditulisi.</p>
+      </div>
+
+      <div class="welcome-step" data-step="1">
+        <div class="astro">🪶</div>
+        <h2>Bahasa yang <span class="grad">dipahami langit</span></h2>
+        <p class="welcome-text">Semesta ini tak membutuhkan kata. Cukup bisikkan lewat gerak tanganmu.</p>
+        <ul class="rules">
+          <li><span>☝️</span><p><b>Ujung telunjuk</b> adalah pena cahaya. Tuliskan debu bintang, sehalus menulis surat untuk rembulan.</p></li>
+          <li><span>✊</span><p><b>Genggaman</b> memanggil seluruh cahaya pulang ke pelukanmu, lalu melahirkannya kembali sebagai galaksi yang baru.</p></li>
+          <li><span>🫶</span><p><b>Hati dari kedua tangan</b> membuat nebula merekah dan berdetak, seperti rindu yang tak sempat diucapkan.</p></li>
+          <li><span>✌️</span><p><b>Dua jari</b> mengganti warna langit, layaknya senja yang tak pernah sama dua kali.</p></li>
+        </ul>
+      </div>
+
+      <div class="welcome-step" data-step="2">
+        <div class="astro">✨</div>
+        <h2>Sebelum kita <span class="grad">berangkat</span></h2>
+        <p class="welcome-text">Kameramu hanya akan menatapmu dari sini. Tak satu pun bayangan dikirim pergi; semuanya tinggal dan terjaga di perangkatmu, seperti rahasia yang disimpan bintang.</p>
+        <p class="welcome-text small">Carilah tempat yang bercahaya, agar langit dapat mengenali tanganmu dengan jelas.</p>
+      </div>
+
+      <div class="welcome-foot">
+        <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+        <div class="row">
+          <button class="btn btn-ghost" data-welcome="prev" hidden>Kembali</button>
+          <button class="btn btn-primary" data-welcome="next">Lanjutkan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= LOADER ================= -->
+  <div class="overlay" id="loader" hidden>
+    <div class="loader-card glass">
+      <div class="orbit"><span></span><span></span><span></span></div>
+      <p id="loader-text">Memuat…</p>
+      <div id="loader-error" hidden>
+        <div class="err-icon">🌑</div>
+        <p class="err-title" id="err-title">Ups</p>
+        <p class="err-msg" id="err-msg"></p>
+        <div class="row">
+          <button class="btn btn-primary" data-action="start">Coba lagi</button>
+          <button class="btn btn-ghost" data-action="cancel">Kembali</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
